@@ -1,0 +1,12 @@
+<h1>Edit blog entry</h1>
+
+<form action="{% url 'blog:blog_list' %}" method="post">
+{% csrf_token %}
+<label for="title">Title</label>
+<input type="text" id="title" name="title" value={{blog.title}}><br>
+<label for="slug">Slug</label>
+<input type="text" id="slug" name="slug" value={{blog.slug}}><br>
+<label for="post">Post</label>
+<input type="text" id="post" name="post" value={{blog.post}}><br>
+<input type="submit" value="Submit">
+</form>
